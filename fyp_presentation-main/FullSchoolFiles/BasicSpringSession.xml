@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sessionSetup PUBLIC "-//UniTime//UniTime Academic Session Setup/EN" "http://www.unitime.org/interface/AcademicSessionSetup.dtd">
+<!-- 
+ * Licensed to The Apereo Foundation under one or more contributor license
+ * agreements. See the NOTICE file distributed with this work for
+ * additional information regarding copyright ownership.
+ *
+ * The Apereo Foundation licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except in
+ * compliance with the License. You may obtain a copy of the License at:
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ -->
+ 
+ <!-- **Session basic info, term, year for session, campus, date format, created-->
+<sessionSetup term="Spring" year="2025" campus="UCD" dateFormat="yyyy/M/d" created="Mon Jan 1 12:00:00 GMT 2024">
+  <!-- Element session is optional, needed to create and/or update acedemic session information -->
+  <session startDate="2024/1/2" endDate="2024/5/20" classEndDate="2024/5/4" examStartDate="2024/5/6" eventStartDate="2024/1/1" eventEndDate="2024/5/21">
+  </session>
+  <!-- Element managers is optional, needed to create/update timetable managers (when incremental=true, managers not present in this file will not be deleted) -->
+  
+  <!--** Managers can stay as is, may need to be changed once-->
+  
+  <managers incremental="true">
+    <manager externalId="7" firstName="Manager" lastName="Curriculum" email="demo@unitime.org">
+      <department code="0101"/>
+      <role reference="Curriculum Mgr" primary="true" emails="true"/>
+    </manager>
+    <manager externalId="4" firstName="Schedule" lastName="Deputy" email="demo@unitime.org">
+      <department code="0101"/>
+      <role reference="Dept Sched Mgr" primary="true" emails="true"/>
+    </manager>
+    <manager externalId="2" firstName="Adam" lastName="Guest" email="demo@unitime.org">
+      <department code="0102"/>
+      <role reference="View All" primary="true" emails="true"/>
+    </manager>
+    <manager externalId="6" firstName="Event" lastName="Manager" email="demo@unitime.org">
+      <department code="0101"/>
+      <department code="0100"/>
+      <department code="0102"/>
+      <role reference="Event Mgr" primary="true" emails="true"/>
+    </manager>
+    <manager externalId="3" firstName="Large" middleName="Lecture" lastName="Room" email="demo@unitime.org">
+      <department code="0100"/>
+      <role reference="Dept Sched Mgr" primary="true" emails="true"/>
+    </manager>
+    <manager externalId="1" firstName="Abraham" lastName="Root" email="demo@unitime.org">
+      <department code="0001"/>
+      <role reference="Administrator" primary="true" emails="true"/>
+    </manager>
+  </managers>
+  
+  <!-- ** -->
+  
+  <departments>
+    <department code="0001" externalId="CS" abbreviation="CS" name="Computer Science Department">
+      <eventManagement enabled="true"/>
+      <required time="false" room="false" distribution="false"/>
+      <instructorPreferences inherit="true"/>
+    </department>
+  </departments>
+
+  <!-- Subject Areas-->
+
+  <subjectAreas>
+  </subjectAreas>
+
+  <!-- Solver Groups-->
+
+  <solverGroups>
+    <solverGroup abbreviation="Instr Plan" name="Instructional Planning">
+      <manager externalId="4"/>
+      <department code="0001"/>
+    </solverGroup>
+  </solverGroups>
+
+  <!-- Date Patterns -->
+
+  <datePatterns>
+    <datePattern name="Full Term" type="Standard" visible="true" default="true">
+      <dates fromDate="2024/1/1" toDate="2024/1/5"/>
+      <dates fromDate="2024/1/8" toDate="2024/1/12"/>
+      <dates fromDate="2024/1/15" toDate="2024/1/19"/>      
+      <dates fromDate="2024/1/22" toDate="2024/1/26"/>
+      <dates fromDate="2024/1/29" toDate="2024/2/2"/>
+      <dates fromDate="2024/2/5" toDate="2024/2/9"/>
+      <dates fromDate="2024/2/12" toDate="2024/2/16"/>
+      <dates fromDate="2024/2/19" toDate="2024/2/23"/>
+      <dates fromDate="2024/2/26" toDate="2024/3/1"/>
+      <dates fromDate="2024/3/4" toDate="2024/3/8"/>
+      <dates fromDate="2024/3/11" toDate="2024/3/15"/>
+      <dates fromDate="2024/3/18" toDate="2024/3/22"/>
+    </datePattern>
+  </datePatterns>
+
+  <timePatterns>
+    <timePattern name="5 x 50" nbrMeetings="5" minsPerMeeting="50" type="Standard" visible="true" nbrSlotsPerMeeting="12" breakTime="10">
+      <days code="MTWThF"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+      <time start="1700"/>
+    </timePattern>
+    <timePattern name="5 x 100" nbrMeetings="5" minsPerMeeting="100" type="Standard" visible="true" nbrSlotsPerMeeting="24" breakTime="10">
+      <days code="MTWThF"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+    </timePattern>
+    <timePattern name="4 x 50" nbrMeetings="4" minsPerMeeting="50" type="Standard" visible="true" nbrSlotsPerMeeting="12" breakTime="10">
+      <days code="MTWTh"/>
+      <days code="MTWF"/>
+      <days code="MTThF"/>
+      <days code="MWThF"/>
+      <days code="TWThF"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+      <time start="1700"/>
+    </timePattern>
+    <timePattern name="4 x 100" nbrMeetings="4" minsPerMeeting="100" type="Standard" visible="true" nbrSlotsPerMeeting="24" breakTime="10">
+      <days code="MTWTh"/>
+      <days code="MTWF"/>
+      <days code="MTThF"/>
+      <days code="MWThF"/>
+      <days code="TWThF"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+    </timePattern>
+    <timePattern name="3 x 50" nbrMeetings="3" minsPerMeeting="50" type="Standard" visible="true" nbrSlotsPerMeeting="12" breakTime="10">
+      <days code="MWF"/>
+      <days code="MTF"/>
+      <days code="MTW"/>
+      <days code="MTTh"/>
+      <days code="MThF"/>
+      <days code="TWF"/>
+      <days code="TWTh"/>
+      <days code="MThF"/>
+      <days code="WThF"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+      <time start="1700"/>
+    </timePattern>
+    <timePattern name="3 x 100" nbrMeetings="3" minsPerMeeting="100" type="Standard" visible="true" nbrSlotsPerMeeting="24" breakTime="10">
+      <days code="MWF"/>
+      <days code="MTF"/>
+      <days code="MTW"/>
+      <days code="MTTh"/>
+      <days code="MThF"/>
+      <days code="TWF"/>
+      <days code="TWTh"/>
+      <days code="MThF"/>
+      <days code="WThF"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+    </timePattern>
+    <timePattern name="2 x 50" nbrMeetings="2" minsPerMeeting="50" type="Standard" visible="true" nbrSlotsPerMeeting="12" breakTime="10">
+      <days code="MT"/>
+      <days code="MW"/>
+      <days code="MTh"/>
+      <days code="MF"/>
+      <days code="TW"/>
+      <days code="TF"/>
+      <days code="TTh"/>
+      <days code="WF"/>
+      <days code="WTh"/>
+      <days code="WF"/>
+      <days code="ThF"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+      <time start="1700"/>
+    </timePattern>
+    <timePattern name="2 x 100" nbrMeetings="2" minsPerMeeting="100" type="Standard" visible="true" nbrSlotsPerMeeting="24" breakTime="10">
+      <days code="MT"/>
+      <days code="MW"/>
+      <days code="MTh"/>
+      <days code="MF"/>
+      <days code="TW"/>
+      <days code="TF"/>
+      <days code="TTh"/>
+      <days code="WF"/>
+      <days code="WTh"/>
+      <days code="WF"/>
+      <days code="ThF"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+    </timePattern>
+    <timePattern name="1 x 50" nbrMeetings="1" minsPerMeeting="50" type="Standard" visible="true" nbrSlotsPerMeeting="12" breakTime="10">
+      <days code="M"/>
+      <days code="T"/>
+      <days code="W"/>
+      <days code="Th"/>
+      <days code="F"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+      <time start="1700"/>
+    </timePattern>
+    <timePattern name="1 x 100" nbrMeetings="1" minsPerMeeting="100" type="Standard" visible="true" nbrSlotsPerMeeting="24" breakTime="10">
+      <days code="M"/>
+      <days code="T"/>
+      <days code="W"/>
+      <days code="Th"/>
+      <days code="F"/>
+      <time start="0800"/>
+      <time start="0900"/>
+      <time start="1000"/>
+      <time start="1100"/>
+      <time start="1200"/>
+      <time start="1300"/>
+      <time start="1400"/>
+      <time start="1500"/>
+      <time start="1600"/>
+    </timePattern>
+    <timePattern name="Exact Time" nbrMeetings="1" minsPerMeeting="0" type="Exact Time" visible="true" nbrSlotsPerMeeting="6" breakTime="10"/>
+  </timePatterns>
+
+  <!-- Academic Areas -->
+
+  <academicAreas>
+    <academicArea externalId="A" abbreviation="A" title="UCD's Only Academic Area"/>
+  </academicAreas>
+
+  <!-- <academicClassifications>
+    <academicClassification externalId="01" code="01" name="Junior Year"/>
+    <academicClassification externalId="02" code="02" name="Senior Year"/>
+  </academicClassifications> -->
+
+  <!-- <posMajors>
+    <posMajor code="M1" academicArea="A" externalId="M1" name="Major 1"/>
+    <posMajor code="M2" academicArea="A" externalId="M2" name="Major 2"/>
+    <posMajor code="M3" academicArea="A" externalId="M3" name="Major 3"/>
+  </posMajors>
+
+  <posMinors>
+    <posMinor code="m1" academicArea="A" externalId="m1" name="Minor 1"/>
+    <posMinor code="m2" academicArea="A" externalId="m2" name="Minor 2"/>
+    <posMinor code="m3" academicArea="A" externalId="m3" name="Minor 3"/>
+  </posMinors> -->
+
+  <studentGroups>
+  	<studentGroup code="G1" name="Group 1" externalId="g1"/>
+  	<studentGroup code="G2" name="Group 2" externalId="g2"/>
+  </studentGroups>
+  
+  <studentAccomodations>
+    <studentAccomodation code="EC" name="Ergonomic Chair" externalId="ACC-EC"/>
+    <studentAccomodation code="NS" name="No Stairs" externalId="ACC-NS"/>
+    <studentAccomodation code="OT" name="Other" externalId="ACC-OT"/>
+    <studentAccomodation code="WC" name="Wheelchair" externalId="ACC-WC"/>
+  </studentAccomodations>
+</sessionSetup>
